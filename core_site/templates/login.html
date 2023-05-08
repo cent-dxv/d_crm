@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<div class="col-md-6 offset-md-3 mt-4">
+  
+  <h3>  log in</h3>
+
+
+ 
+
+  <form action="{% url 'login_user' %}" method="post">
+
+    {% csrf_token %}
+
+    <br />
+    <br />
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="username" class="form-control" required name = "email"  aria-describedby="emailHelp" />
+
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1"  class="form-label">Password</label>
+      <input type="password"  name = "password" required placeholder="password" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  <br/>
+  <br/> 
+    <p class="fs-6">
+      else if you dot have an accout <br/>
+      you can regester here 
+    </p>
+  </form>
+
+
+</div>
+
+{% endblock %}
