@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card my-4">
+  <h5 class="card-header">Customer record for {{ records.firstname }}</h5>
+  <div class="card-body">
+    <form action="#" method="Post">
+      {% csrf_token %}
+
+
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> first name </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="firstname" value = {{ records.firstname }}>
+  </div>
+
+</div>
+
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> last name </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="lastname" value = {{ records.lastname }}>
+  </div>
+
+</div>
+
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> email </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="email" value = {{ records.email }}>
+  </div>
+
+</div>
+
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> address </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="address" value = {{ records.address }}>
+  </div>
+
+</div>
+
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> city </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="city" value = {{ records.city }}>
+  </div>
+
+</div>
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> state </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="state" value = {{ records.state }}>
+  </div>
+
+</div>
+
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label  class="col-form-label"> <p> zip code </p>  </label>
+  </div>
+  <div class="col-auto">
+    <input type="Text"  class="form-control" name="zipcode" value = {{ records.zipcode }}>
+  </div>
+
+</div>
+  
+    
+
+      <button class="btn btn-secondary" name="action" value="cancel">
+        cancel
+      </button>
+      <button class="btn btn-danger" name="action" value="delete">
+        delete
+      </button>
+      <button class="btn btn-primary" name="action" value="save">save</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
