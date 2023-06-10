@@ -1,5 +1,5 @@
 import mysql.connector
-
+#  to create a data base
 dataBase = mysql.connector.connect(
     
     host = 'localhost',

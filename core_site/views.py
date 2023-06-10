@@ -110,5 +110,5 @@ def add_records(request):
         return render(request , "add_record.html" , {"form" :form})
     
     else :
-        messages.error("you have to log in to add new records")
+        messages.error(request ,"you have to log in to add new records")
         return redirect('home')
